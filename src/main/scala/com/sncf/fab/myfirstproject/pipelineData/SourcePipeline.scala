@@ -51,7 +51,14 @@ trait SourcePipeline extends Serializable {
       .getOrCreate()
     import sparkSession.implicits._
     //read data from csv file
-    val dsTgaTgd = sparkSession.read.option("header", "true").option("inferSchema", "true").csv(getSource()).as[TgaTgdParsed]
+    //val dsTgaTgd = sparkSession.read.option("header", "true").option("inferSchema", "true").csv(getSource()).as[TgaTgdParsed]
+    val dsTgaTgd = sparkSession.read.option("header", "true")
+      .option("inferSchema", "true")
+      .option("mode", "DROPMALFORMED")
+      .csv(getSource())
+      .as[TgaTgdParsed]
+
+
     /*Traitement des fichiers*/
     process(dsTgaTgd)
   }

@@ -2,7 +2,7 @@ package com.sncf.fab.myfirstproject.spark.batch
 
 import com.sncf.fab.myfirstproject.pipelineData.{SourcePipeline, TraitementTga, TraitementTgd}
 import org.apache.log4j.Logger
-
+import org.apache.spark.sql.functions.unix_timestamp
 /**
   * Created by simoh-labdoui on 11/05/2017.
   */

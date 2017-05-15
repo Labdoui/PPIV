@@ -3,6 +3,7 @@ package com.sncf.fab.myfirstproject.parser
 import com.sncf.fab.myfirstproject.Exception.PpivRejectionHandler
 import com.sncf.fab.myfirstproject.business.TgaTgdParsed
 import org.joda.time.DateTime
+import org.joda.time.format.DateTimeFormat
 
 
 /**
@@ -16,8 +17,8 @@ class TgParseLine extends TLineParser[TgaTgdParsed] {
     try {
       Some(
         TgaTgdParsed (
-          "", "", DateTime.now(), 0, "", "", "", true, true, true, true
-        )
+          "", "","", "","","","","", "","", "",0)
+
       )
 
     } catch {
