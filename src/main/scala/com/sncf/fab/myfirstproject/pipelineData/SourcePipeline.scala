@@ -9,7 +9,7 @@ import org.apache.spark.sql.{Dataset, SparkSession}
 /**
   * Created by simoh-labdoui on 11/05/2017.
   */
-trait SourcePipeline extends  Serializable {
+trait SourcePipeline extends   Serializable {
 
 
   /**
